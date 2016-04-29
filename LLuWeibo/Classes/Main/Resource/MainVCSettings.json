@@ -1,0 +1,27 @@
+[
+ {
+    "vcName": "LLuHomeTableViewController",
+    "title": "首页",
+    "imageName": "tabbar_home"
+ },
+ {
+     "vcName": "LLuMessageTableViewController",
+     "title": "消息",
+     "imageName": "tabbar_message_center"
+ },
+ {
+ "vcName": "NullViewController",
+ "title": "",
+ "imageName": "tabbar_compose_icon_add"
+ },
+ {
+     "vcName": "LLuDiscoverTableViewController",
+     "title": "广场",
+     "imageName": "tabbar_discover"
+ },
+ {
+     "vcName": "LLuProfileTableViewController",
+     "title": "我",
+     "imageName": "tabbar_profile"
+ }
+ ]
