@@ -49,7 +49,6 @@ class LLuHomeTableViewController: LLuBaseTableViewController {
         
         super.viewDidLoad()
         
-        SVProgressHUD.show()
         //1.如果没有登录，就设置未登录界面的信息
         if !userLogin {
             

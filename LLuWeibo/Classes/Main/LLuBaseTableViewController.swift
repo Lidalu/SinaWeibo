@@ -11,7 +11,7 @@ import UIKit
 class LLuBaseTableViewController: UITableViewController, VisitorViewDelegate {
 
     //定义一个变量保存用户当前是否登录
-    var userLogin = true
+    var userLogin = false
     //定义属性保存未登录界面
     var visitorView: LLuVisitorView?
     
@@ -43,6 +43,11 @@ class LLuBaseTableViewController: UITableViewController, VisitorViewDelegate {
     func loginBtnWillClick() {
         
         print(#function)
+        
+        //1.弹出登录界面
+        let QAuthVC = LLuQAuthViewController()
+        let QAuthNav = UINavigationController(rootViewController: QAuthVC)
+        presentViewController(QAuthNav, animated: true, completion: nil)
     }
     
     func registerBtnWillClick() {
