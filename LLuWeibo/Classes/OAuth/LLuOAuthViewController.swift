@@ -131,7 +131,17 @@ extension LLuOAuthViewController: UIWebViewDelegate
 //       access_token      2.00dLOZWCWKs7OE9a35af53801WYMxD
 //            print(JSON)
             
+            //1.字典转模型
+            /*
+             plist: 特点是只能存储系统自带的数据类型
+             将对象转换为JSON之后写入文件中 --->  在公司中已经开始使用
+             偏好设置： 本质plist
+             归档： 可以存储自定义对象
+             数据库： 用于存储大数据，特点效率较高
+            */
             let account = LLuUserCount(dict: JSON as! [String: AnyObject])
+            //2.归档模型
+            account.saveAccount()
             print(account)
             }) { (_, error) in
                 

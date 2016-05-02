@@ -53,6 +53,7 @@ class LLuBaseTableViewController: UITableViewController, VisitorViewDelegate {
     func registerBtnWillClick() {
         
         print(#function)
-        print(LLuNetWorkTools.sharedNetworkTools())
+//        print(LLuNetWorkTools.sharedNetworkTools())
+        print(LLuUserCount.loadAccount())
     }
 }
