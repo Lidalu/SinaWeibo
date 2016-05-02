@@ -35,25 +35,35 @@ class LLuUserCount: NSObject, NSCoding {
         return "\(dict)"
     }
     
+    class func userLogin() -> Bool {
+        
+        return LLuUserCount.loadAccount() != nil
+    }
     
     // MARK - 保存和读取
     func saveAccount() -> Void {
         
-        let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
-        let filePath = (path as NSString).stringByAppendingPathComponent("account.plist")
-        print("filePath \(filePath)")
-        NSKeyedArchiver.archiveRootObject(self, toFile: filePath)
+//        let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
+//        let filePath = (path as NSString).stringByAppendingPathComponent("account.plist")
+//        print("filePath \(filePath)")
+        NSKeyedArchiver.archiveRootObject(self, toFile: "account.plist".cacheDir())
     }
     
     //记载授权模型
+    static var account: LLuUserCount?
    class func loadAccount() -> LLuUserCount? {
-        
-    let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
-    let filePath = (path as NSString).stringByAppendingPathComponent("account.plist")
-    print("filePath \(filePath)")
     
-        let account = NSKeyedUnarchiver.unarchiveObjectWithFile(filePath) as?LLuUserCount
+    if account != nil {
         
+        return account
+    }
+//    let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
+//    let filePath = (path as NSString).stringByAppendingPathComponent("account.plist")
+//    print("filePath \(filePath)")
+    
+//        let account = NSKeyedUnarchiver.unarchiveObjectWithFile(filePath) as?LLuUserCount
+    account = NSKeyedUnarchiver.unarchiveObjectWithFile("account.plist".cacheDir()) as?LLuUserCount
+    
         return account
     }
     

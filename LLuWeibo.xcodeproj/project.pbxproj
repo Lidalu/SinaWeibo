@@ -35,6 +35,7 @@
 		044EEFDA1CD38B38000B22BF /* LLuOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EEFD91CD38B38000B22BF /* LLuOAuthViewController.swift */; };
 		045D98341CD4F28400AF16EC /* LLuHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D98331CD4F28400AF16EC /* LLuHttpClient.swift */; };
 		045D98361CD74C1200AF16EC /* LLuUserCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D98351CD74C1200AF16EC /* LLuUserCount.swift */; };
+		045D98381CD7630700AF16EC /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D98371CD7630700AF16EC /* String+Category.swift */; };
 		C5BB37127A8DCC2DE1BD94FD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772F179639B2A329600D3F7 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		044EEFD91CD38B38000B22BF /* LLuOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLuOAuthViewController.swift; sourceTree = "<group>"; };
 		045D98331CD4F28400AF16EC /* LLuHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLuHttpClient.swift; sourceTree = "<group>"; };
 		045D98351CD74C1200AF16EC /* LLuUserCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLuUserCount.swift; sourceTree = "<group>"; };
+		045D98371CD7630700AF16EC /* String+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
 		873CF985C3CE912231AA6325 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8A7F32E36DECF113765183F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9772F179639B2A329600D3F7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +291,7 @@
 				045D98331CD4F28400AF16EC /* LLuHttpClient.swift */,
 				044EEFBD1CD258C0000B22BF /* UIView+AutoLayout.swift */,
 				044EEFD61CD387B2000B22BF /* LLuNetWorkTools.swift */,
+				045D98371CD7630700AF16EC /* String+Category.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				044EEFC81CD258C0000B22BF /* QRCodeViewController.swift in Sources */,
 				044EEF9F1CD25899000B22BF /* AppDelegate.swift in Sources */,
 				044EEFCB1CD258C0000B22BF /* LLuVisitorView.swift in Sources */,
+				045D98381CD7630700AF16EC /* String+Category.swift in Sources */,
 				044EEFC01CD258C0000B22BF /* LLuDiscoverTableViewController.swift in Sources */,
 				045D98341CD4F28400AF16EC /* LLuHttpClient.swift in Sources */,
 				044EEFCF1CD258C0000B22BF /* LLuProfileTableViewController.swift in Sources */,

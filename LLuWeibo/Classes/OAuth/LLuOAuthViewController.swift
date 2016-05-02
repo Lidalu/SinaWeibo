@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 /*
  Sina 授权
  1.成为新浪开发者
@@ -112,6 +112,16 @@ extension LLuOAuthViewController: UIWebViewDelegate
         }
         
         return false
+    }
+    
+    func webViewDidStartLoad(webView: UIWebView) {
+        
+        SVProgressHUD.showWithStatus("正在加载。。。", maskType: SVProgressHUDMaskType.Black)
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        
+        SVProgressHUD.dismiss()
     }
     
     /**
