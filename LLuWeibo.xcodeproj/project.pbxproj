@@ -31,7 +31,10 @@
 		044EEFCF1CD258C0000B22BF /* LLuProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EEFBB1CD258C0000B22BF /* LLuProfileTableViewController.swift */; };
 		044EEFD01CD258C0000B22BF /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EEFBD1CD258C0000B22BF /* UIView+AutoLayout.swift */; };
 		044EEFD21CD25EBC000B22BF /* Pods.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9772F179639B2A329600D3F7 /* Pods.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		044EEFD51CD35B6F000B22BF /* LLuQAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EEFD41CD35B6E000B22BF /* LLuQAuthViewController.swift */; };
+		044EEFD71CD387B2000B22BF /* LLuNetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EEFD61CD387B2000B22BF /* LLuNetWorkTools.swift */; };
+		044EEFDA1CD38B38000B22BF /* LLuOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EEFD91CD38B38000B22BF /* LLuOAuthViewController.swift */; };
+		045D98341CD4F28400AF16EC /* LLuHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D98331CD4F28400AF16EC /* LLuHttpClient.swift */; };
+		045D98361CD74C1200AF16EC /* LLuUserCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D98351CD74C1200AF16EC /* LLuUserCount.swift */; };
 		C5BB37127A8DCC2DE1BD94FD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772F179639B2A329600D3F7 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,7 +98,10 @@
 		044EEFB91CD258C0000B22BF /* LLuMessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLuMessageTableViewController.swift; sourceTree = "<group>"; };
 		044EEFBB1CD258C0000B22BF /* LLuProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLuProfileTableViewController.swift; sourceTree = "<group>"; };
 		044EEFBD1CD258C0000B22BF /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
-		044EEFD41CD35B6E000B22BF /* LLuQAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLuQAuthViewController.swift; sourceTree = "<group>"; };
+		044EEFD61CD387B2000B22BF /* LLuNetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLuNetWorkTools.swift; sourceTree = "<group>"; };
+		044EEFD91CD38B38000B22BF /* LLuOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLuOAuthViewController.swift; sourceTree = "<group>"; };
+		045D98331CD4F28400AF16EC /* LLuHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLuHttpClient.swift; sourceTree = "<group>"; };
+		045D98351CD74C1200AF16EC /* LLuUserCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLuUserCount.swift; sourceTree = "<group>"; };
 		873CF985C3CE912231AA6325 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8A7F32E36DECF113765183F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9772F179639B2A329600D3F7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,7 +187,7 @@
 		044EEFA01CD258C0000B22BF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				044EEFD31CD35B4F000B22BF /* QAuth */,
+				044EEFD81CD38B38000B22BF /* OAuth */,
 				044EEFA11CD258C0000B22BF /* Common */,
 				044EEFA41CD258C0000B22BF /* Discover */,
 				044EEFA61CD258C0000B22BF /* Home */,
@@ -280,17 +286,20 @@
 		044EEFBC1CD258C0000B22BF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				045D98331CD4F28400AF16EC /* LLuHttpClient.swift */,
 				044EEFBD1CD258C0000B22BF /* UIView+AutoLayout.swift */,
+				044EEFD61CD387B2000B22BF /* LLuNetWorkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		044EEFD31CD35B4F000B22BF /* QAuth */ = {
+		044EEFD81CD38B38000B22BF /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
-				044EEFD41CD35B6E000B22BF /* LLuQAuthViewController.swift */,
+				044EEFD91CD38B38000B22BF /* LLuOAuthViewController.swift */,
+				045D98351CD74C1200AF16EC /* LLuUserCount.swift */,
 			);
-			path = QAuth;
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		260F3589FFEB65D3B285B943 /* Pods */ = {
@@ -498,10 +507,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				044EEFC51CD258C0000B22BF /* PopoverViewController.swift in Sources */,
+				044EEFD71CD387B2000B22BF /* LLuNetWorkTools.swift in Sources */,
+				044EEFDA1CD38B38000B22BF /* LLuOAuthViewController.swift in Sources */,
 				044EEFD01CD258C0000B22BF /* UIView+AutoLayout.swift in Sources */,
 				044EEFC31CD258C0000B22BF /* PopoverAnimation.swift in Sources */,
 				044EEFBE1CD258C0000B22BF /* TitleButton.swift in Sources */,
 				044EEFCA1CD258C0000B22BF /* LLuMainViewController.swift in Sources */,
+				045D98361CD74C1200AF16EC /* LLuUserCount.swift in Sources */,
 				044EEFC91CD258C0000B22BF /* LLuBaseTableViewController.swift in Sources */,
 				044EEFC61CD258C0000B22BF /* QRCodeCardViewController.swift in Sources */,
 				044EEFCE1CD258C0000B22BF /* LLuMessageTableViewController.swift in Sources */,
@@ -509,7 +521,7 @@
 				044EEF9F1CD25899000B22BF /* AppDelegate.swift in Sources */,
 				044EEFCB1CD258C0000B22BF /* LLuVisitorView.swift in Sources */,
 				044EEFC01CD258C0000B22BF /* LLuDiscoverTableViewController.swift in Sources */,
-				044EEFD51CD35B6F000B22BF /* LLuQAuthViewController.swift in Sources */,
+				045D98341CD4F28400AF16EC /* LLuHttpClient.swift in Sources */,
 				044EEFCF1CD258C0000B22BF /* LLuProfileTableViewController.swift in Sources */,
 				044EEFC21CD258C0000B22BF /* LLuPopoverPresentationController.swift in Sources */,
 				044EEFBF1CD258C0000B22BF /* UIBarButtonItem+Category.swift in Sources */,
@@ -643,6 +655,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LLuWeibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lidalu1125.LLuWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -658,6 +671,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LLuWeibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lidalu1125.LLuWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

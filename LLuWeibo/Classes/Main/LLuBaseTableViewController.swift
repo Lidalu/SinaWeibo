@@ -45,13 +45,14 @@ class LLuBaseTableViewController: UITableViewController, VisitorViewDelegate {
         print(#function)
         
         //1.弹出登录界面
-        let QAuthVC = LLuQAuthViewController()
-        let QAuthNav = UINavigationController(rootViewController: QAuthVC)
-        presentViewController(QAuthNav, animated: true, completion: nil)
+        let OAuthVC = LLuOAuthViewController()
+        let OAuthNav = UINavigationController(rootViewController: OAuthVC)
+        presentViewController(OAuthNav, animated: true, completion: nil)
     }
     
     func registerBtnWillClick() {
         
         print(#function)
+        print(LLuNetWorkTools.sharedNetworkTools())
     }
 }

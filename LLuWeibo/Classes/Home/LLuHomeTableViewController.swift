@@ -9,39 +9,6 @@
 import UIKit
 import SVProgressHUD
 
-/*
- Sina 授权
- 1.成为新浪开发者
-    登录open.weibo.com网站，注册一个账号
- 2.创建一个应用程序
-    填写应用程序信息
-        名称：李大大大大帅 来自：XXX
-    App Key：3877804788
-    App Secret：1fbe7f7779e1182d864a8fcaa22e81e5
- 3.获取QAuth授权
- 3.1获取未授权的RequestToken
- 3.2获取已经授权的RequestToken
- 3.3利用已经授权的RequestToken换取AccessToken
-    只要用户登录成功，服务器就会返回RequestToken（字符串）
-    https://api.weibo.com/oauth2/authorize?client_id=3877804788&redirect_uri=http://www.lidalu1125.cn 
- 注意：1.不能有多余的空格       (error:invalid_request)
-      2.如果appkey不对也会报错 (error:invalid_client)
-      3.如果uri不对也会报错     (error:redirect_uri_mismatch)
- 如果是第一次对某个APP授权，会跳转到授权界面
- 授权成功：http://www.lidalu1125.cn/?code=253d8bc1c60c810b446ff93d7d27434a
- 授权取消：http://www.lidalu1125.cn/?error_uri=%2Foauth2%2Fauthorize&error=access_denied&error_description=user%20denied%20your%20request.&error_code=21330
- 授权成功后code = 字符串就是RequestToken
- 获取授权OAuth2的access_token接口
- URL：
- https://api.weibo.com/oauth2/access_token
- HTTP请求方式： POST
-
- 请求参数             必选    类型及范围           说明
- client_id          true	string      申请应用时分配的AppKey。
- client_secret      true	string      申请应用时分配的AppSecret。
- grant_type         true	string	请求的类型，填写authorization_code
- */
-
 class LLuHomeTableViewController: LLuBaseTableViewController {
 
     //Command + Option + Shift + 方向键打开合上代码
@@ -78,6 +45,17 @@ class LLuHomeTableViewController: LLuBaseTableViewController {
         titleBtn.selected = !titleBtn.selected
         
     }
+    
+//    func getBannerList() -> Void {
+//        
+//        let parameters: NSDictionary = ["params": "{\"type\":\"123546789abc\",\"province\":\"110000\"}",
+//            "os":"2",
+//            "sign":"F4DDF6F67E383199",
+//            "version":"2.4"];
+//        
+//         let urlString: NSString = "http://app.gegejia.com/yangege/appNative/resource/homeList";
+//        LLuHttpClient.sharedNetworkTools().request(urlString, method: HttpRequestType.Post, parameters: parameters, prepareExecute: nil, success: nil, failure: nil)
+//    }
     
     /**
      初始化导航条
