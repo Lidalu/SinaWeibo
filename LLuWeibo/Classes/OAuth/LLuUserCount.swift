@@ -43,9 +43,6 @@ class LLuUserCount: NSObject, NSCoding {
     // MARK - 保存和读取
     func saveAccount() -> Void {
         
-//        let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
-//        let filePath = (path as NSString).stringByAppendingPathComponent("account.plist")
-//        print("filePath \(filePath)")
         NSKeyedArchiver.archiveRootObject(self, toFile: "account.plist".cacheDir())
     }
     
@@ -53,15 +50,12 @@ class LLuUserCount: NSObject, NSCoding {
     static var account: LLuUserCount?
    class func loadAccount() -> LLuUserCount? {
     
+    //1.判断是否已经加载过
     if account != nil {
         
         return account
     }
-//    let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
-//    let filePath = (path as NSString).stringByAppendingPathComponent("account.plist")
-//    print("filePath \(filePath)")
-    
-//        let account = NSKeyedUnarchiver.unarchiveObjectWithFile(filePath) as?LLuUserCount
+    //2.加载授权模型
     account = NSKeyedUnarchiver.unarchiveObjectWithFile("account.plist".cacheDir()) as?LLuUserCount
     
         return account
